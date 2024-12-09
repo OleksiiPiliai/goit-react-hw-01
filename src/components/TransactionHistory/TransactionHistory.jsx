@@ -1,12 +1,26 @@
 import clsx from "clsx";
 import style from "./TransactionHistory.module.css"
-const TransactionHistory = ({ type, amount, currency }) => {
+
+const TransactionHistory = ({ items }) => {
   return (
-    <tr className={clsx(style.tr)}>
-      <td className={clsx(style.td)}>{type}</td>
-      <td className={clsx(style.td)}>{amount}</td>
-      <td className={clsx(style.td)}>{currency}</td>
-    </tr>
+    <table className={clsx(style.table)}>
+          <thead className={clsx(style.thead)}>
+            <tr >
+              <th className={clsx(style.th)}>Type</th>
+              <th className={clsx(style.th)}>Amount</th>
+              <th className={clsx(style.th)}>Currency</th>
+            </tr>
+          </thead>
+      <tbody>
+        {items.map((item) => (
+          <tr className={clsx(style.tr)} key={item.id}>
+            <td className={clsx(style.td)}> {item.type}</td>
+            <td className={clsx(style.td)}>{item.amount}</td>
+            <td className={clsx(style.td)}>{item.currency}</td>
+          </tr>
+        ))}
+      </tbody>
+        </table>
   );
 };
 

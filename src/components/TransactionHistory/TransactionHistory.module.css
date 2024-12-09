@@ -1,3 +1,21 @@
+.table {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto 40px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.thead {
+    background-color: #333;
+    color: white;
+}
+
+.th {
+    padding: 8px;
+    border: 1px solid black;
+}
+
 .tr{
     background-color: #f9f9f9;
     border: 1px solid black;

@@ -1,21 +1,20 @@
-.imgFr{
-    margin-bottom: 12px;
+.friendList {
+    max-width: 768px;
+    margin: 0 auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-.nameFr{
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.status{
-    font-size: 16px;
-}
-
-.green{
-    color: green;
-}
-
-.red{
-    color: red;
+.friendItem {
+    border: 2px solid black;
+    max-width: 100px;
+    height: 130px;
+    padding: 8px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
